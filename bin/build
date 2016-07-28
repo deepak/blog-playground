@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+function compile_scss() {
+    file_name=$(basename -s '.scss' $1);
+    sassc $1 public/css/$file_name.css -t compressed
+}
+
+# example
+# $ tree public/css
+# app/css
+# ├── _variables.scss
+# ├── experiment.scss
+# ├── main.scss
+# └── print.scss
+find                                                \
+  app/css         `# find under this directory`     \
+  -type f         `# only for files`                \
+  -name '*.scss'  `# which end with scss`           \
+  ! -name '_*'    `# but which do not start with _` \
+|                                                   \
+while read file;
+do
+    compile_scss "$file";
+done

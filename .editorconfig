@@ -10,7 +10,7 @@ insert_final_newline = true
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{rb}]
+[*.{rb,scss}]
 charset = utf-8
 
 # 2 space indentation
