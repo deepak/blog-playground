@@ -24,3 +24,8 @@ end
 guard :shell do
   watch(/(.*).scss/) { |m| `bin/build` }
 end
+
+guard 'livereload' do
+  watch(/(.*).css/)
+  watch(/(.*).html/)
+end

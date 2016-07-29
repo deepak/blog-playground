@@ -3,8 +3,11 @@
 source "https://rubygems.org"
 
 group :development do
-  gem 'foreman',       require: false
-  gem 'guard',         require: false
-  gem 'guard-shell',   require: false
-  gem 'guard-bundler', require: false
+  gem 'puma'
+  gem 'rack-livereload',  require: false
+
+  gem 'guard',            require: false
+  gem 'guard-shell',      require: false
+  gem 'guard-bundler',    require: false
+  gem 'guard-livereload', require: false
 end
