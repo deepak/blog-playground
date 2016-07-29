@@ -5,6 +5,7 @@ source "https://rubygems.org"
 group :development do
   gem 'puma'
   gem 'rack-livereload',  require: false
+  gem 'rack-nocache',     require: false
 
   gem 'foreman',          require: false
   gem 'guard',            require: false

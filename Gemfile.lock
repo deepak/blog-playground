@@ -51,6 +51,7 @@ GEM
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
+    rack-nocache (0.1.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -69,6 +70,7 @@ DEPENDENCIES
   guard-shell
   puma
   rack-livereload
+  rack-nocache
 
 BUNDLED WITH
    1.12.5
