@@ -1,0 +1,8 @@
+$primary-background-color: #f1efd8; // slightly darker: #f0efd1
+$primary-text-color: #1b1b1b;
+$strong-text-color: darken($primary-text-color, 5%);
+$weak-text-color: lighten($primary-text-color, 15%);
+$secondary-color: #b93c2f;
+$highlight-color: lighten($secondary-color, 8%);
+$primary-inverse-text-color: white;
+$debugging-color: red;
