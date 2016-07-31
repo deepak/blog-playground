@@ -40,14 +40,14 @@ strong {
 a {
   color: $secondary-color;
   text-decoration: none;
-}
 
-a:hover {
-  border-bottom: 1px solid $secondary-color;
-}
+  &:hover {
+    border-bottom: 1px solid $secondary-color;
+  }
 
-a:visited {
-  color: $visited-color;
+  &:visited {
+    color: $visited-color;
+  }
 }
 
 header {
@@ -66,11 +66,11 @@ header {
     text-decoration: none;
     transition: none 200ms ease-out;
     transition-property: color, background;
-  }
 
-  a:hover {
-    background: $highlight-color;
-    color: $primary-inverse-text-color;
+    &:hover {
+      background: $highlight-color;
+      color: $primary-inverse-text-color;
+    }
   }
 }
 
