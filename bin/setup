@@ -3,4 +3,4 @@
 # install `sassc` if not installed
 command -v sassc >/dev/null 2>&1 || { brew install sassc; }
 
-bundle install
+bundle install --quiet
