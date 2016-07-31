@@ -2,12 +2,19 @@ $base-font-size: 16px;
 $font-stack: Helvetica, Arial, sans-serif;
 
 @mixin font-smoothing($value: on) {
-    @if $value == on {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @else {
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-    }
+  @if $value == on {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  } @else {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+@mixin typeset {
+  font-family: $font-stack;
+  line-height: 1.5rem;
+  word-spacing: .06em;
+  text-rendering: optimizeLegibility;
+  @include font-smoothing;
 }

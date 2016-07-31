@@ -1,8 +1,8 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "mixins";
-@import "colors";
-@import "typography";
+@import 'mixins';
+@import 'colors';
+@import 'typography';
 
 .debugging {
   border: 1px solid $debugging-color;
@@ -13,16 +13,12 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  max-width: 50rem;
-  font-family: $font-stack;
-  line-height: 1.5rem;
-  word-spacing: 0.06em;
-  padding: 4rem 1rem;
+  @include typeset;
   background-color: $primary-background-color;
   color: $primary-text-color;
-  text-rendering: optimizeLegibility;
-  @include font-smoothing();
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 4rem 1rem;
 }
 
 h1 {
@@ -55,17 +51,17 @@ header {
     font-weight: 300;
   }
 
-  a.title {
+  .title {
     color: $primary-text-color;
-    letter-spacing: 0.02rem;
-    padding: 0.2em 0.4em;
+    letter-spacing: .02rem;
+    padding: .2em .4em;
     text-decoration: none;
     transition: none 200ms ease-out;
     transition-property: color, background;
 
     &:hover {
       background: $highlight-color;
-      border-bottom: none;
+      border-bottom: 0;
       color: $primary-inverse-text-color;
     }
 
@@ -79,7 +75,7 @@ main {
   padding: 2rem 1rem;
 }
 
-ul.posts {
+.posts {
   list-style-type: none;
 
   li {
@@ -88,9 +84,9 @@ ul.posts {
   }
 
   .date {
-    display: block;
-    font-size: 0.9rem;
     color: $weak-text-color;
+    display: block;
+    font-size: .9rem;
   }
 }
 
@@ -98,8 +94,8 @@ footer {
   @include clearfix;
 
   .card {
-    max-width: 50%;
     float: left;
     margin-right: 3rem;
+    max-width: 50%;
   }
 }

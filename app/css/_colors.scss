@@ -5,5 +5,5 @@ $visited-color: #6f11cc;
 $strong-text-color: darken($primary-text-color, 5%);
 $weak-text-color: lighten($primary-text-color, 15%);
 $highlight-color: lighten($secondary-color, 8%);
-$primary-inverse-text-color: white;
-$debugging-color: red;
+$primary-inverse-text-color: #fff; // white
+$debugging-color: #f00;            // red
