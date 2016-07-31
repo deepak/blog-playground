@@ -1,8 +1,8 @@
 @charset "utf-8";
 
+@import "mixins";
 @import "colors";
 @import "typography";
-@import "clearfix";
 
 .debugging {
   border: 1px solid $debugging-color;
@@ -95,6 +95,8 @@ ul.posts {
 }
 
 footer {
+  @include clearfix;
+
   .card {
     max-width: 50%;
     float: left;
