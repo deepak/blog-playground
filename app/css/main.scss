@@ -2,7 +2,6 @@
 
 @import "colors";
 @import "typography";
-@import "mixins";
 @import "clearfix";
 
 .debugging {
@@ -56,20 +55,22 @@ header {
     font-weight: 300;
   }
 
-  a {
-    border: 1px solid $highlight-color;
-    @include border-radius(20px);
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    padding: 1em 2em;
-    text-transform: uppercase;
+  a.title {
+    color: $primary-text-color;
+    letter-spacing: 0.02rem;
+    padding: 0.2em 0.4em;
     text-decoration: none;
     transition: none 200ms ease-out;
     transition-property: color, background;
 
     &:hover {
       background: $highlight-color;
+      border-bottom: none;
       color: $primary-inverse-text-color;
+    }
+
+    &:visited {
+      color: $primary-text-color;
     }
   }
 }
