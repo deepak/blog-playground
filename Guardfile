@@ -22,7 +22,10 @@ guard :bundler do
 end
 
 guard :shell do
-  watch(/(.*).scss/) { |m| `bin/build` }
+  watch(/(.*).scss/) do |m|
+    `bin/scss-lint #{m[0]}`
+    `bin/build`
+  end
 end
 
 guard 'livereload' do

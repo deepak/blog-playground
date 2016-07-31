@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+bundle exec scss-lint $1
